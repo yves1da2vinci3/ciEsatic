@@ -1,6 +1,5 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import Head from 'next/head'
-import Footer from '../components/Footer'
 import NavBar from "../components/NavBar"
 import {AiOutlineArrowRight} from 'react-icons/ai'
 import Link from 'next/link'
@@ -10,7 +9,6 @@ import {MdOutlinePhoneAndroid,MdNetworkWifi} from 'react-icons/md'
 import {FaRobot,FaDatabase} from 'react-icons/fa'
 import SecondNavBar from '../components/SecondNavBar'
 import Section from '../components/Section'
-
 import Carousel from '../components/Carousel'
 export default function Home() {
   const [open,setOpen] = useState(false);
@@ -38,13 +36,13 @@ INFoRMATIQUE DE L'ESATIC.</p>
     </div>
 
 {/* bref introductiondu club informatique */}
-<h1 className="  text-2xl md:text-4xl text-center font-semibold mb-5 text-black uppercase underline">Breve introduction de l'ESATIC </h1>
+<h1 className="  text-2xl md:text-4xl font-semibold mb-5 text-black italic text-center mt-10">Breve introduction de l'ESATIC </h1>
 <div className="  flex flex-col md:grid md:grid-cols-2 gap-x-7 mb-8">
 <div className="rounded-lg">
   <img src="/image/ecole.jpg" className="rounded-lg md:ml-3 mr-4 shadow-xl" />
 </div>
 <div>
-  <p className="text-blue-800 mt-12 capitalize font-semibold text-2xl md:text-left text-center">A propos de l'ESATIC</p>
+  <p className="text-blue-800 mt-12 capitalize font-semibold text-2xl md:text-left text-center ">A propos de l'ESATIC</p>
   <p className="text-gray-500 font-semibold text-xl mt-4 md:text-left text-center ">Esatic (Ecole Superieure Africaine des Telecommunications) est une ecole créée en 2012 <br/>
   dans le but de relever le defi de la digitalisation de la cote d'ivoire.
   </p>
@@ -61,11 +59,11 @@ INFoRMATIQUE DE L'ESATIC.</p>
 </div>
 
     {/* presentation breve des sections */}
-    <h1 className="  text-2xl md:text-4xl font-semibold mb-5 text-black italic text-center">Decouvrez nos sections </h1>
+    <h1 className="  text-2xl md:text-4xl font-semibold mb-10 text-black italic text-center mt-10">Decouvrez nos sections </h1>
 
     <div className="h-auto  mb-5 flex flex-wrap items-center w-full 	md:place-items-center  md:grid md:grid-cols-3 gap-8  justify-center " >
   <Section name="web developement" />
-  <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-72 items-center rounded-lg shadow-lg break-words p-5` }>
+  <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-96 gap-y-8 items-center rounded-lg shadow-lg break-words p-5` }>
             <h1 className="font-bold text-white uppercase "> mobile developement</h1>
             <MdOutlinePhoneAndroid    className="w-16 h-16 text-green-600 " />
             <p className="text-white font-semibold">Le développement d'applications mobiles est l'acte ou le processus par lequel une application mobile est développée pour les appareils mobiles, tels que les assistants numériques personnels, les assistants numériques d'entreprise ou les téléphones mobiles</p>
@@ -77,7 +75,7 @@ INFoRMATIQUE DE L'ESATIC.</p>
       </p>
 </div>
         </div>
-        <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-72 items-center rounded-lg shadow-lg break-words p-5` }>
+        <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-96 gap-y-8 items-center rounded-lg shadow-lg break-words p-5` }>
             <h1 className="font-bold text-white uppercase ">Intelligence artificielle</h1>
             <FaRobot    className="w-16 h-16 text-red-600 " />
             <p className="text-white font-semibold"> L'intelligence artificielle est « l'ensemble des théories et des techniques mises en œuvre en vue de réaliser des machines capables de simuler l'intelligence humaine ». Elle englobe donc un ensemble de concepts et de technologies, plus qu'une discipline autonome constituée.</p>
@@ -90,7 +88,7 @@ INFoRMATIQUE DE L'ESATIC.</p>
 </div>
         </div>
   
-        <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-72 items-center rounded-lg shadow-lg break-words p-5` }>
+        <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-96 gap-y-8 items-center rounded-lg shadow-lg break-words p-5` }>
             <h1 className="font-bold text-white uppercase ">Internet des objets</h1>
             <MdNetworkWifi   className="w-16 h-16 text-yellow-100 " />
             <p className="text-white font-semibold">L'Internet des objets ou IdO est l'interconnexion entre l'Internet et des objets, des lieux et des environnements physiques. L'appellation désigne un nombre croissant d'objets connectés à Internet permettant ainsi une communication entre nos biens dits physiques et leurs existences numériques.</p>
@@ -102,7 +100,7 @@ INFoRMATIQUE DE L'ESATIC.</p>
       </p>
 </div>
         </div>
-        <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-72 items-center rounded-lg shadow-lg break-words p-5` }>
+        <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-96 gap-y-8 items-center rounded-lg shadow-lg break-words p-5` }>
             <h1 className="font-bold text-white uppercase ">securite informatique</h1>
             <BsFillShieldLockFill   className="w-16 h-16 text-blue-300 " />
             <p className="text-white font-semibold">La sécurité des systèmes d’information ou plus simplement sécurité informatique, est l’ensemble des moyens techniques, organisationnels, juridiques et humains nécessaires à la mise en place de moyens visant à empêcher ..</p>
@@ -114,7 +112,7 @@ INFoRMATIQUE DE L'ESATIC.</p>
       </p>
 </div>
         </div>
-        <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-72 items-center rounded-lg shadow-lg break-words p-5` }>
+        <div  className={` ${HomeStyles.sectionBg}  transform hover:-translate-y-4 hover:transition duration-300 cursor-pointer flex flex-col  w-96 gap-y-8 items-center rounded-lg shadow-lg break-words p-5` }>
             <h1 className="font-bold text-white uppercase ">big data</h1>
             <FaDatabase   className="w-16 h-16 text-yellow-500 " />
             <p className="text-white font-semibold">Le big data /ˌbɪɡ ˈdeɪtə/, les mégadonnées ou les données massives, désigne les ressources d’informations dont les caractéristiques en termes de volume, de vélocité et de variété imposent l’utilisation de technologies et de méthodes analytiques particulières pour générer de la valeur, et qui dépassent en général les ... </p>
@@ -128,7 +126,7 @@ INFoRMATIQUE DE L'ESATIC.</p>
         </div>
     </div>
 {/* presentation des partenaires du club informatique */}
-<h1 className="  text-2xl md:text-4xl font-semibold mb-5 text-black italic text-center">Decouvrez nos partenaires </h1>
+<h1 className="  text-2xl md:text-4xl font-semibold mb-10 text-black italic text-center mt-10 ">Decouvrez nos partenaires </h1>
 <div className="h-auto  flex-col items-center   md:flex-row flex justify-center mb-6 flex-wrap gap-2">
 <div className=" w-[60%]  md:w-[30%] border-2 shadow-sm h-[30rem] flex flex-col justify-between  ">
   <img src="https://1.bp.blogspot.com/-et0DqA3CdqM/YGdAqGG2dQI/AAAAAAAAAyk/-aetfqGwcRAIxL_IOiwP6oEvzpqLasijgCLcBGAsYHQ/s1080/IMG-20210402-WA0009.jpg" className="h-64" />
@@ -162,10 +160,11 @@ INFoRMATIQUE DE L'ESATIC.</p>
 </div>
 </div>
        {/* partie des citation relatives aux ICT */}   
-       <h1 className="  text-2xl md:text-4xl font-semibold mb-5 text-black italic text-center">Quelques citations a savoir </h1>
+       <h1 className="  text-2xl md:text-4xl font-semibold text-black italic text-center mb-16 mt-16">Quelques citations a savoir </h1>
   <Carousel />
 
   
     </div>
   )
 }
+ 
