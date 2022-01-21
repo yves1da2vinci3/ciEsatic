@@ -1,6 +1,6 @@
 import React ,{ useState ,useRef,useEffect}from 'react'
 import httpClient from '../utils/httpClient'
-import userAtom from '../recoil/atoms/userAtom';
+import userAtom from '../recoil/Atoms/userAtom';
 import {useRecoilValue} from 'recoil'
 import {useRouter} from 'next/router'
 function ask() {

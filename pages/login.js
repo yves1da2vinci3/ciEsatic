@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import Image from 'next/image'
 import LoginStyle from '../public/css/login.module.css'
 import Link from 'next/link'
-import userAtom from '../recoil/atoms/userAtom';
+import userAtom from '../recoil/Atoms/userAtom';
 import {useSetRecoilState,useRecoilValue} from 'recoil';
 import {useRouter} from 'next/router'
 import httpClient from '../utils/httpClient'

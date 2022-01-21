@@ -2,7 +2,7 @@ import React from 'react'
 import {FaRegEye,FaTrash} from 'react-icons/fa'
 import {useRouter} from 'next/router'
 import httpClient from '../utils/httpClient'
-import userAtom from '../recoil/atoms/userAtom';
+import userAtom from '../recoil/Atoms/userAtom';
 import {useRecoilValue} from 'recoil'
 function UserQuestions({date,Title,description,userQuestionId}) {
   let userInfo = useRecoilValue(userAtom)

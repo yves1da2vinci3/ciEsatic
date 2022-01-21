@@ -3,7 +3,7 @@ import {useRouter} from 'next/router'
 import {FaImage, FaLine} from 'react-icons/fa'
 import {ImCross} from 'react-icons/im'
 import httpClient from '../../utils/httpClient'
-import userAtom from '../../recoil/atoms/userAtom';
+import userAtom from '../../recoil/Atoms/userAtom';
 import {useRecoilValue} from 'recoil'
 function QuestionDetail({fecthedQuestion}) {
   const config = {

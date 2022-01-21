@@ -2,7 +2,7 @@ import React, { useState ,useEffect}from 'react'
 import Head from 'next/head'
 import {FaUser,FaRegQuestionCircle, FaPen, FaTrash} from 'react-icons/fa'
 import UserQuestions from "../../components/UserQuestions"
-import userAtom from '../../recoil/atoms/userAtom';
+import userAtom from '../../recoil/Atoms/userAtom';
 import {useRecoilValue} from 'recoil'
 import httpClient from '../../utils/httpClient'
 function index() {

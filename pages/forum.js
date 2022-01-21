@@ -5,7 +5,7 @@ import httpClient from '../utils/httpClient'
 import Question from '../components/Question.js'
 import UserQuestions from "../components/UserQuestions"
 import Link from 'next/link'
-import userAtom from '../recoil/atoms/userAtom';
+import userAtom from '../recoil/Atoms/userAtom';
 import {useRecoilValue} from 'recoil'
 function forum({fecthedQuestions}) {
   let userInfo = useRecoilValue(userAtom)
